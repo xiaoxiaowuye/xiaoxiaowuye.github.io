@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>连一连</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/onLine2.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/onLine2.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var obj = $(".demo");
+            var size = obj.size();
+            for (var i = 0; i < size; i++) {
+                obj.eq(i).onLine({
+                    regainCanvas: true
+                });
+            }
+        });
+    </script>
+</head>
+<body style="padding-top:100px;padding-left: 100px;" background="images/bg.jpeg">
+    <div style="width: max-content;height: max-content;position: absolute;top: 15px;left:15%"  >
+        <img src="images/cy1.png"/>
+    </div>
+    <div id="test" data-pair=5 class="demo pt10" style="position:absolute;top:30%;left:20%;">
+        <div class="show cb" >
+            <div class="tools" style="background-color: aliceblue;">
+               <!-- <div class="savePair">设置key:value</div> -->
+                <div class="getPair">查看答案</div>
+                <div class="goBackBtn">撤销</div>
+                <div class="resetCanvasBtn">重置</div>
+            </div>
+            <div class="showleft">
+                <!--左侧-->
+                <span class="showitem" data-id="L1">初小</span>
+                <span class="showitem" data-id="L2">高小</span>
+                <span class="showitem" data-id="L3">师范</span>
+            </div>
+            <div class="showright">
+                <!--右侧-->
+                <span class="showitem" data-id="R1">指培养教师的学校</span>
+                <span class="showitem" data-id="R2">指小学一至四年级阶段</span>
+                <span class="showitem" data-id="R3">指小学五至六年级阶段</span>
+            </div>
+
+            <div style="width: max-content;height: max-content;position:absolute;top:25%;right:-20%"  >
+               <a href="round3_2.html"> <img src="images/arr_right.png" style="width: 100px;height: 100px;"/></a>
+            </div> 
+            <!-- -->
+            <canvas class="canvas"></canvas>
+            <canvas class="backcanvas"></canvas>
+        </div>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>连一连</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/onLine3.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/onLine4.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var obj = $(".demo");
+            var size = obj.size();
+            for (var i = 0; i < size; i++) {
+                obj.eq(i).onLine({
+                    regainCanvas: true
+                });
+            }
+        });
+    </script>
+</head>
+<body style="padding-top:100px;padding-left: 100px;background-image: url('images/bg.jpeg');background-size: contain;">
+
+    <div id="test" data-pair=5 class="demo pt10" style="position:absolute;top:5%;left:10%;">
+        <div class="show two" >
+
+            <div class="showleft two">
+                <!--下方-->
+                <span class="showitem" data-id="L1">客栈</span>
+                <span class="showitem" data-id="L2" style="width: 150px;">大黄油布雨伞</span>
+                <span class="showitem" data-id="L3">泥灶</span>
+                <span class="showitem" data-id="L4">乌篷船</span>
+            </div>
+
+            <div class="showright three">
+                <!--上方-->
+                <span class="showitem three" data-id="R1" ><img src="images/hy.jpeg" style="width:260px;height:120px;"/></span>
+                <span class="showitem three" data-id="R2"><img src="images/wc.jpeg" style="width:260px;height:120px;" /></span>
+            </div>
+
+            <div class="showright three">
+                <!--上方-->
+                <span class="showitem three" data-id="R3"><img src="images/nz.jpeg" style="width:260px;height:120px;" /></span>
+                <span class="showitem three" data-id="R4"><img src="images/kz.jpeg" style="width:260px;height:120px;" /></span>
+            </div>
+            <div class="tools" style="background-color: aliceblue;">
+                <!-- <div class="savePair">设置key:value</div> -->
+                 <div class="getPair">查看答案</div>
+                 <div class="goBackBtn">撤销</div>
+                 <div class="resetCanvasBtn">重置</div>
+             </div>
+
+            <canvas class="canvas"></canvas>
+            <canvas class="backcanvas"></canvas>
+        </div>
+    </div>
+
+    </body>
+</html>
