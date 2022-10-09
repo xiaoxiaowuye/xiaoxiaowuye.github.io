@@ -60,7 +60,7 @@
 		var subSize = box.find(".showitem").size();
 		//addstyle showitem
 		box.children(".show").children().children("span").on("touchstart mousedown", function(event){
-			alert("1")
+			//alert("1")
 			countL = 0; 
 			countR = 0;
 			for(var i=0; i<subSize; i++ ){
@@ -92,7 +92,7 @@
 		});
 		
 		$(document).on("mousemove touchmove", function(event){		//移动		
-					
+			alert("2")		
 			var $target = $(event.target);		
 			if(groupstate){
 				mid_endx=event.pageX-box.find(".show").offset().left;
