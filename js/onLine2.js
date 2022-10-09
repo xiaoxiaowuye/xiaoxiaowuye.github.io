@@ -59,7 +59,7 @@
 		var orderPair = new Array();
 		var subSize = box.find(".showitem").size();
 		//addstyle showitem
-		box.children(".show").children().children("span").on("mousedown", function(event){
+		box.children(".show").children().children("span").on("touchstart mousedown", function(event){
 			countL = 0; 
 			countR = 0;
 			for(var i=0; i<subSize; i++ ){
@@ -89,7 +89,8 @@
 			mid_starty=$(this).attr("top");
 			event.preventDefault();	
 		});
-		$(document).mousemove(function(event){		//移动				
+		
+		$(document).on("mousemove touchmove", function(event){		//移动				
 			var $target = $(event.target);		
 			if(groupstate){
 				mid_endx=event.pageX-box.find(".show").offset().left;
@@ -138,7 +139,9 @@
 			};		
 			event.preventDefault();
 		});
-		$(document).mouseup(function(event){  //抬起
+		//$(document).mousemove();
+
+		$(document).on("touchend mouseup", function(event){  //抬起
 			var $target = $(event.target);
 			if(groupstate){	
 				var targettrue;
@@ -315,6 +318,8 @@
 			};				
 			event.preventDefault();			
 		});
+
+		//$(document).mouseup();
 		//canvas 追加2d画布			
 		var context = canvas.getContext('2d');  //canvas追加2d画图
 		var lastX,lastY;//存放遍历坐标
