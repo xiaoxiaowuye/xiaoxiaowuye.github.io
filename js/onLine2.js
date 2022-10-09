@@ -91,8 +91,7 @@
 			event.preventDefault();	
 		});
 
-		$(document).on("touchmove", function(event){		//移动		
-			alert("2")		
+		$(document).on("touchmove", function(event){		//移动			
 			var $target = $(event.target);		
 			if(groupstate){
 				mid_endx=event.pageX-box.find(".show").offset().left;
