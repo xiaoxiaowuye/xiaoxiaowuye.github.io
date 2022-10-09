@@ -59,7 +59,7 @@
 		var orderPair = new Array();
 		var subSize = box.find(".showitem").size();
 		//addstyle showitem
-		box.children(".show").children().children("span").on("touchstart mousedown", function(event){
+		box.children(".show").children().children("span").on("touchstart", function(event){
 			//alert("1")
 			countL = 0; 
 			countR = 0;
@@ -90,8 +90,8 @@
 			mid_starty=$(this).attr("top");
 			event.preventDefault();	
 		});
-		
-		$(document).on("mousemove touchmove", function(event){		//移动		
+
+		$(document).on("touchmove", function(event){		//移动		
 			alert("2")		
 			var $target = $(event.target);		
 			if(groupstate){
@@ -143,7 +143,7 @@
 		});
 		//$(document).mousemove();
 
-		$(document).on("touchend mouseup", function(event){  //抬起
+		$(document).on("touchend", function(event){  //抬起
 			var $target = $(event.target);
 			if(groupstate){	
 				var targettrue;
